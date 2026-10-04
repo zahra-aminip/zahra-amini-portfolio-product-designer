@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Nexa FinTech Case Study — Zahra Amini</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <a class="logo" href="index.html">
+            Zahra Amini<span>.</span>
+        </a>
+
+        <button class="menu-btn">
+            ☰
+        </button>
+
+        <nav>
+            <a href="index.html#case-studies">Case Studies</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#experience">Experience</a>
+            <a class="button primary" href="index.html#contact">
+                Let’s talk
+            </a>
+        </nav>
+
+    </header>
+
+
+    <main class="case">
+
+        <section class="case-hero container">
+
+            <p class="eyebrow">
+                CASE STUDY · FINTECH · 2026
+            </p>
+
+            <h1>
+                Nexa FinTech
+            </h1>
+
+            <h2>
+               Redesigning Identity Verification for Digital Credit
+            </h2>
+
+            <p>
+                Reducing drop-off and improving error recovery in the credit application journey.
+                Practice UX case study combining behavioral data analysis,
+                UX research and mobile-first interface design.
+            </p>
+
+            <div class="case-stats">
+
+                <span>
+                    <b>12,000</b>
+                    applications
+                </span>
+
+                <span>
+                    <b>75,000+</b>
+                    events
+                </span>
+
+                <span>
+                    <b>5</b>
+                    usability participants
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-image placeholder">
+            <img class="img"
+               src="assets/images/fintech-img/cover.png" 
+               alt="Nexa credit application user flow and wireframes"
+                >   
+        </section>
+
+
+
+        <section class="case-content container">
+
+            <div class="toc">
+
+                <span>
+                    01 Overview
+                </span>
+
+                <span>
+                    02 Research & Findings
+                </span>
+
+                <span>
+                    03 Design 
+                </span>
+
+                <span>
+                    04 Testing
+                </span>
+
+                <span>
+                    05 Result & Learning
+                </span>
+
+            </div>
+
+
+            <article>
+
+                <p class="eyebrow">
+                    01 — Overview 
+                </p>
+
+                 <h2>
+                    Project Overview
+                </h2>
+
+                <p>
+                    Nexa is a fintech platform that enables users to apply for credit digitally, review their financial status
+                    , and manage their transactions.In this project, I focused on redesigning the identity verification experience,
+                     as this is a critical step in the credit application journey. Errors at this stage can create friction and 
+                     lead users to abandon the application. 
+                    
+                </p>
+
+                <h2>
+                    The Problem
+                </h2>
+
+                <p>
+                    User behavior analysis showed that a significant number of users started a credit application but abandoned
+                     it before completing the process.Initial analysis indicated that identity verification, particularly when
+                    errors occurred, was one of the key drop-off points.
+                    
+                </p>
+
+                 <h2>
+                   Key Question
+                </h2>
+
+                <p>
+                How might we help users understand identity verification errors and recover from them without abandoning their credit application?
+                    
+                </p>
+
+                
+                <h2>
+                   Goal
+                </h2>
+
+                <p>
+                Increase the credit application completion rate by reducing drop-off during identity verification.                    
+                </p>
+
+
+                <p class="eyebrow">
+                    02 — Research & Findings
+                </p>
+
+                <h2>
+                    What the data revealed
+                </h2>
+
+                <p>
+                    I analyzed 12,000 credit applications and 75,364 events using Python and Pandas
+                    to identify where users dropped off and what factors contributed to abandonment.
+                    The analysis showed an overall completion rate of 34.07%, with 65.93% of applications abandoned before submission.
+                    The largest drop occurred at the financial information step, while identity verification errors also emerged as 
+                    an important source of friction.These findings helped narrow the focus toward error recovery and clearer guidance,
+                    particularly during identity verification.
+                </p>
+
+
+                <div class="finding-grid">
+
+                    <div>
+
+                        <b>
+                            34.07%
+                        </b>
+
+                        <span>
+                            overall conversion
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <b>
+                            65.93%
+                        </b>
+
+                        <span>
+                            overall drop-off
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <b>
+                            16.59%
+                        </b>
+
+                        <span>
+                            drop-off at the first major step
+                        </span>
+
+                    </div>
+
+                </div>
+                <div class="case-image placeholder">
+                        <img class="img"
+                            src="assets/images/fintech-img/User Journey Map.png" 
+                            alt="Nexa credit application User Journey Map"
+                        >
+                </div>
+                <h2>
+                    Research Approach
+
+                </h2>
+                <p>
+                    
+                    To identify where users dropped off and validate the hypotheses, 
+                    I analyzed user behavior across the credit application journey using Python and Pandas.
+                    The dataset included user type, device, application stages and final status, 
+                    conversion and drop-off rates, time spent, and the number of errors experienced.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Identity verification was a key drop-off point
+                        Funnel analysis revealed a significant drop across the identity verification stages,
+                         with the largest drop occurring when users moved from identity verification to financial information.
+                    </li>
+
+                    <li>
+                      More errors were associated with lower completion
+                      Users who experienced more errors had a lower likelihood of completing the application,
+                       highlighting the importance of clear error handling and recovery.t.
+                    </li>
+
+                    <li>
+                        Mobile users experienced higher drop-off
+                        The drop-off rate was higher among mobile users than desktop users. 
+                        This made mobile constraints and usage conditions an important consideration when redesigning the experience..
+                    </li>
+
+                </ul>
+                <h3>
+                    User Need
+                    <br>
+                        “I want to understand what went wrong and know how to fix it so I can continue my application.”
+                </h3>
+
+                <div class="case-image placeholder">
+                    <img class="img"
+                            src="assets/images/fintech-img/Data Analysis and Key Insights.png" 
+                            alt="Nexa credit application Data Analysis and Key Insights"
+                    >
+                </div>
+                 <h2>
+                    Design Opportunities
+
+                </h2>
+                <p>
+                    
+                   How might we make the identity verification experience clearer and easier to recover from when errors occur?
+                </p>
+                <ul>
+                    <li>
+                        Clearly explain what went wrong and what the user needs to do next.
+                    </li>
+
+                    <li>
+                        Allow users to recover from errors without having to restart the entire process.
+                    </li>
+
+                    <li>
+                        Provide clear guidance before photo upload, including the required image type and key criteria for an acceptable photo.
+                    </li>
+                    <li>
+                        Help users understand where they are in the application process and what steps remain.    
+                    </li>
+
+                </ul>
+                
+
+                <div class="case-image placeholder">
+                    <img class="img"
+                            src="assets/images/fintech-img/User Flow.png" 
+                            alt="Nexa credit application User Flow"
+                    >
+                </div>
+
+                <p class="eyebrow">
+                    03 — Design
+                </p>
+
+                <h2>
+                    Wireframes
+                </h2>
+
+                <p>
+                    The redesign focused on a mobile-first Persian RTL
+                    experience, clearer system feedback, more explicit
+                    recovery actions and stronger visual hierarchy.
+                </p>
+
+
+
+                <div class="case-image placeholder">
+                    <img class="img"
+                            src="assets/images/fintech-img/Wireframes.png" 
+                            alt="Nexa credit application Wireframes"
+                    >
+                </div>
+                <h2>
+                    Design
+                </h2>
+
+                <div class="case-image placeholder">
+                    <img class="img"
+                            src="assets/images/fintech-img/design.png" 
+                            alt="Nexa credit application design"
+                    >
+                </div>
+
+
+                <p class="eyebrow">
+                    05 — TESTING
+                </p>
+
+                <h2>
+                    Testing the new direction
+                </h2>
+                <p>
+                   I tested the identity verification flow with 5 participants to evaluate task completion,
+                   error understanding, and users’ ability to recover and continue the process after encountering an error.
+                </p>
+                <h3>
+                   Participants
+                </h3>
+
+                <p>
+                   5 users: 3 new users and 2 returning users, with a focus on the mobile experience.
+                </p>
+
+                <h3>
+                   Test Goals & Success Metrics
+                </h3>
+                <p>
+                   The goal was to assess how well users understood verification errors and whether they could continue and recover from
+                   the process without assistance.
+                </p>
+                <div class="finding-grid">
+
+                    <div>
+
+                        <b>
+                            4/5
+                        </b>
+
+                        <span>
+                            Task completion
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <b>
+                            4/5
+                        </b>
+
+                        <span>
+                            Recovery success
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <b>
+                            3/5
+                        </b>
+
+                        <span>
+                            Error understanding
+                        </span>
+
+                    </div>
+                    
+                    <div>
+
+                        <b>
+                            42 sec
+                        </b>
+
+                        <span>
+                            Time to recover
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <h3>
+                   Scenario
+                </h3>
+                <p>
+                  Imagine you have applied for a 50 million toman credit through Nexa 
+                  and have reached the identity verification step. Please complete the process as far as you can.
+                </p>
+                <ul>
+                    <li>Task 1: Start the identity verification process.</li>
+                    <li>Task 2: Upload your identification document.</li>
+                    <li>Task 3: The uploaded image is unclear. What would you do?</li>
+                </ul>
+        
+
+                <h3>
+                Key Findings
+                </h3>
+                <ul>
+                    <li>
+                        Recovery guidance was insufficient      
+                    </li>
+                    <p>
+                        After an unsuccessful verification attempt, users did not have enough information to understand what went wrong or decide what to do next.
+                    </p>
+
+                    <li>
+                        Alternative verification paths were not visible enough
+                    </li>
+                    <p>
+                        Some users did not notice that they could use an alternative method to complete the identity verification process.           
+                   </p>
+
+                </ul>
+               <div class="case-image placeholder">
+                    <img class="img"
+                            src="assets/images/fintech-img/Usability Testings  and Iteration.png" 
+                            alt="Nexa credit application Usability Testings  and Iteration"
+                    >
+                </div>
+
+
+
+                <p class="eyebrow">
+                    Result & Learning
+                </p>
+
+                <h2>
+                   Impact on the Product.
+                </h2>
+
+                <p>
+                  The redesigned experience focused on making errors clearer and improving the recovery path, with the goal of helping users:
+                </p>
+                <ul>
+                    <li>Understand why their identity verification failed more quickly.</li>
+                    <li>Find the appropriate next step more easily.</li>
+                    <li>Continue the verification process without restarting from the beginning.</li>
+                    <li>Rely less on support or external assistance. </li>
+                </ul>
+                
+                <h2>
+                    Expected Impact
+                </h2>
+
+                <p>
+                   Increase    
+                </p>
+                <ul>
+                    <li>Credit application completion</li>
+                    <li>Recovery success</li>
+                    <li>User confidence in the identity verification process</li>
+                    <li>Clarity and predictability of the experience</li>
+                </ul>
+                <p>
+                   Reduce    
+                </p>
+                <ul>
+                    <li>Drop-off during identity verification</li>
+                    <li>Unnecessary user effort</li>
+                    <li>Abandonment after an error</li>
+                    <li>Support requests related to identity verification</li>
+                </ul>
+                <p>
+                    The goal of the redesign was to turn an ambiguous error state into a clear and recoverable path so users understand what happened,
+                     what to do next, and how to continue without losing their progress.
+                </p>
+
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container">
+
+            <span>
+                © 2026 Zahra Amini
+            </span>
+
+            <span>
+                Product Designer
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
